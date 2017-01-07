@@ -1,0 +1,20 @@
+* { border: 0; border-spacing: 0; margin: 0; outline: 0; padding: 0; }
+.clearfix { clear: both; }
+html, body { height: 100%; }
+
+footer { background: #EEE; border-top: 1px solid #DDD; bottom: 0; min-width: 320px; padding: 7px 0 17px; position: fixed; width: 100%; }
+footer a { color: #15C; font: 13px/30px 'Arial', sans-serif; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+footer nav { margin: 0 12px; text-align: center; }
+footer nav > ul { list-style: none; }
+footer nav li { color: #333; display: inline-block; font: 13px/22px 'Arial', sans-serif; height: 22px; padding: 0 6px; }
+footer nav li.author { display: block; margin-top: 9px; }
+footer nav li.author a .icon { background: url('../i/author-icon.png') no-repeat; color: #333; display: inline-block; font-weight: bold !important; height: 30px; padding-left: 26px; }
+footer nav li.author a:hover .icon { color: #000; }
+
+@media (min-width: 768px) {
+	footer { height: 30px; padding: 0; }
+	footer nav { margin: 0; text-align: right; }
+	footer nav li { height: 30px; line-height: 30px; padding: 0 15px; }
+	footer nav li.author { display: inline-block; margin-top: 0; }
+}
