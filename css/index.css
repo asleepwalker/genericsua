@@ -1,0 +1,110 @@
+main {
+	min-width: 320px;
+	position: absolute;
+	top: 47%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+.site-logo img {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+}
+
+.site-logo .about {
+	color: #0F3D4A;
+	display: block;
+	font: 13px/1.5 "Arial", sans-serif;
+	text-align: center;
+}
+
+form.search {
+	margin: 20px 8% 0;
+}
+
+form.search:after {
+	clear: both;
+	content: '';
+	display: block;
+}
+
+form.search input {
+	border: 2px solid #007EFF;
+	box-sizing: border-box;
+	display: block;
+	font: 13px "Arial", sans-serif;
+	height: 36px;
+	padding: 0 6px;
+	width: 100%;
+}
+
+form.search .example {
+	color: #447075;
+	float: left;
+	font: 11px/1.5 "Arial", sans-serif;
+	margin-top: 8px;
+	max-width: 140px;
+}
+
+form.search .example .pseudo {
+	border-bottom: 1px dotted rgba(14,41,78,0.5);
+	color: #0E294E;
+	cursor: pointer;
+}
+
+form.search .example .pseudo:hover {
+	opacity: 0.9;
+}
+
+form.search button.submit {
+	background: #007EFF;
+	color: white;
+	cursor: pointer;
+	float: right;
+	font-size: 12px;
+	margin-top: 8px;
+	padding: 8px 17px;
+	transition: background 0.2s;
+}
+
+form.search button.submit:hover {
+	background: #006EDE;
+}
+
+@media (min-width: 384px) {
+	form.search .example {
+		font-size: 12px;
+		max-width: 180px;
+	}
+
+	form.search button.submit {
+		padding: 8px 20px;
+	}
+}
+
+@media (min-width: 568px) {
+	.site-logo img {
+		width: 250px;
+	}
+
+	.site-logo .about {
+		font-size: 14px;
+	}
+
+	form.search {
+		margin-top: 25px;
+	}
+
+	main {
+		left: 50%;
+		margin-left: -284px;
+		width: 568px;
+	}
+}
+
+@media (min-width: 768px) {
+	main {
+		top: 50%;
+	}
+}

@@ -1,8 +1,8 @@
 * { border: 0; border-spacing: 0; margin: 0; outline: 0; padding: 0; }
-.clearfix { clear: both; }
-html, body { height: 100%; }
+html, body, .wrapper { height: 100%; }
+.wrapper { min-height: 384px; position: relative; }
 
-footer { background: #EEE; border-top: 1px solid #DDD; bottom: 0; min-width: 320px; padding: 7px 0 17px; position: fixed; width: 100%; }
+footer { background: #EEE; border-top: 1px solid #DDD; bottom: 0; min-width: 320px; padding: 7px 0 17px; position: absolute; width: 100%; }
 footer a { color: #15C; font: 13px/30px 'Arial', sans-serif; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
 footer nav { margin: 0 12px; text-align: center; }
