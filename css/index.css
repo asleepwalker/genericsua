@@ -1,3 +1,7 @@
+.wrapper {
+	background: #f8fbff url('../i/bg-pattern.jpg');
+}
+
 main {
 	min-width: 320px;
 	position: absolute;
@@ -14,7 +18,7 @@ main {
 }
 
 .site-logo .about {
-	color: #0F3D4A;
+	color: #092C35;
 	display: block;
 	font: 13px/1.5 "Arial", sans-serif;
 	text-align: center;
@@ -71,6 +75,10 @@ form.search button.submit {
 
 form.search button.submit:hover {
 	background: #006EDE;
+}
+
+footer {
+	background: rgba(241,241,241,0.55);
 }
 
 @media (min-width: 384px) {
