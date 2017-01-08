@@ -1,5 +1,6 @@
 .wrapper {
 	background: #f8fbff url('../i/bg-pattern.jpg');
+	min-height: 384px;
 }
 
 main {
@@ -11,11 +12,12 @@ main {
 }
 
 .site-logo img {
+	box-sizing: border-box;
 	display: block;
 	height: 39px;
 	margin: 0 auto;
 	padding-left: 1.5%;
-	width: 200px;
+	width: 197px;
 }
 
 .site-logo .about {
@@ -36,13 +38,22 @@ form.search:after {
 }
 
 form.search input {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
 	border: 2px solid #007EFF;
 	box-sizing: border-box;
 	display: block;
 	font: 13px "Arial", sans-serif;
 	height: 36px;
-	padding: 0 6px;
+	padding: 0 8px;
 	width: 100%;
+}
+
+form.search input::-webkit-search-decoration,
+form.search input::-webkit-search-cancel-button,
+form.search input::-webkit-search-results-button,
+form.search input::-webkit-search-results-decoration {
+	display: none;
 }
 
 form.search .example {
@@ -96,7 +107,7 @@ footer {
 @media (min-width: 568px) {
 	.site-logo img {
 		height: 50px;
-		width: 250px;
+		width: 256px;
 	}
 
 	.site-logo .about {
