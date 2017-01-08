@@ -48,12 +48,33 @@
 	margin-top: 11px;
 }
 
+.results .description p {
+	margin-top: 5px;
+}
+
+.results .description p:first-child {
+	margin-top: 0;
+}
+
+.results .description a {
+	color: #15C;
+	text-decoration: none;
+}
+
+.results .description a:hover {
+	text-decoration: underline;
+}
+
+.results .description a.more {
+	font-size: 90%;
+}
+
 .results button.details {
 	background: #007EFF;
 	color: white;
 	cursor: pointer;
 	font-size: 12px;
-	margin-top: 14px;
+	margin-top: 16px;
 	padding: 8px 17px;
 	transition: background 0.2s;
 }
@@ -127,6 +148,25 @@
 	background: #D60000;
 }
 
+.results .about .generics {
+	display: block;
+	float: none;
+	margin: 18px 0 0;
+}
+
+.results .about .generics h3 {
+	color: black;
+	font-size: 14px;
+}
+
+.results .about .generics ul {
+	margin-top: 10px;
+}
+
+.results .about .generics li {
+	font-size: 13px;
+}
+
 @media (min-width: 480px) {
 	.results {
 		margin: 24px 18px 20px 15px;
@@ -158,7 +198,8 @@
 }
 
 @media (min-width: 880px) {
-	.results button.details {
+	.results button.details,
+	.results .about .generics {
 		display: none;
 	}
 
@@ -182,6 +223,7 @@
 
 	.results .description {
 		font-size: 13px;
+		margin-top: 14px;
 	}
 
 	.results .photo {
