@@ -109,7 +109,7 @@ footer nav li.author a:hover .icon { color: #000; }
 
 @media (min-width: 666px) {
 	header form.search {
-		max-width: 550px;
+		max-width: 540px;
 	}
 
 	header form.search input {
@@ -159,6 +159,6 @@ footer nav li.author a:hover .icon { color: #000; }
 
 	header form.search {
 		margin-top: 1px;
-		width: 550px;
+		width: 540px;
 	}
 }

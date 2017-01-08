@@ -1,3 +1,155 @@
 .results {
 	margin: 20px 15px 20px 12px;
 }
+
+.results .item:after {
+	clear: both;
+	content: '';
+	display: block;
+}
+
+.results h2 {
+	font: normal 22px "Arial", sans-serif;
+}
+
+.results h2 a {
+	color: black;
+	text-decoration: none;
+}
+
+.results h2 a:hover {
+	text-decoration: underline;
+}
+
+.results h2 .price {
+	border-radius: 3px;
+	color: white;
+	display: inline-block;
+	font-size: 75%;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	padding: 5px 9px;
+	vertical-align: middle;
+}
+
+.results h2 .price.acceptable {
+	background: #FF9900;
+}
+
+.results .producer {
+	color: #444;
+	font: 11px sans-serif;
+}
+
+.results .description {
+	color: #222;
+	font-family: sans-serif;
+	font-size: 12px;
+	margin-top: 11px;
+}
+
+.results button.details {
+	background: #007EFF;
+	color: white;
+	cursor: pointer;
+	font-size: 12px;
+	margin-top: 14px;
+	padding: 8px 17px;
+	transition: background 0.2s;
+}
+
+.results button.details:hover {
+	background: #006EDE;
+}
+
+.results img.photo {
+	display: none;
+	height: auto;
+}
+
+.results .generics {
+	display: none;
+	float: left;
+	margin: 7px 0 0 25px;
+}
+
+.results .generics h3 {
+	color: #2C4448;
+	font: normal 16px "Arial", sans-serif;
+}
+
+@media (min-width: 480px) {
+	.results {
+		margin: 24px 18px 20px 15px;
+	}
+
+	.results img.photo {
+		display: block;
+		float: left;
+		width: 28%;
+	}
+
+	.results .about {
+		float: left;
+		margin-left: 2%;
+		width: 70%;
+	}
+}
+
+@media (min-width: 666px) {
+	.results img.photo {
+		width: 180px;
+	}
+
+	.results .about {
+		margin-left: 16px;
+		max-width: 385px;
+		width: calc(100% - 196px);
+	}
+}
+
+@media (min-width: 880px) {
+	.results button.details {
+		display: none;
+	}
+
+	.results .generics {
+		display: block;
+	}
+}
+
+@media (min-width: 1004px) {
+	.results {
+		margin: 45px 70px 60px 42px;
+	}
+
+	.results h2 {
+		font-size: 28px;
+	}
+
+	.results .producer {
+		font-size: 12px;
+	}
+
+	.results .description {
+		font-size: 13px;
+	}
+
+	.results img.photo {
+		margin-top: -3px;
+		width: 240px;
+	}
+
+	.results .about {
+		margin-left: 27px;
+		width: calc(100% - 267px);
+	}
+
+	.results .generics {
+		margin-top: 8px;
+	}
+
+	.results .generics h3 {
+		font-size: 18px;
+	}
+}
