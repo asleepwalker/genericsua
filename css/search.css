@@ -1,3 +1,9 @@
+.status {
+	color: #555;
+	font: 10px sans-serif;
+	margin: 7px 15px 0 12px;
+}
+
 .results {
 	margin: 20px 15px 20px 12px;
 }
@@ -168,6 +174,10 @@
 }
 
 @media (min-width: 480px) {
+	.status {
+		margin: 7px 18px 0 calc(30% + 5px);
+	}
+
 	.results {
 		margin: 24px 18px 20px 15px;
 	}
@@ -186,6 +196,10 @@
 }
 
 @media (min-width: 666px) {
+	.status {
+		margin-left: 211px;
+	}
+
 	.results .photo {
 		width: 180px;
 	}
@@ -209,6 +223,10 @@
 }
 
 @media (min-width: 1004px) {
+	.status {
+		margin: 8px 70px 0 309px;
+	}
+
 	.results {
 		margin: 45px 70px 60px 42px;
 	}
