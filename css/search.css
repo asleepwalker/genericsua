@@ -262,3 +262,14 @@
 		font-size: 18px;
 	}
 }
+
+
+@media (min-width: 1200px) {
+	.results .about {
+		max-width: 542px;
+	}
+
+	.results .generics {
+		margin-left: 40px;
+	}
+}
