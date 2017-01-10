@@ -212,6 +212,15 @@
 }
 
 @media (min-width: 880px) {
+	.results .description {
+		font-size: 13px;
+		line-height: 1.3;
+	}
+
+	.results .description p {
+		margin-top: 8px;
+	}
+
 	.results button.details,
 	.results .about .generics {
 		display: none;
