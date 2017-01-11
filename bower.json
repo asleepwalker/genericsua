@@ -1,0 +1,19 @@
+{
+  "name": "genericsua",
+  "homepage": "https://github.com/asleepwalker/genericsua",
+  "authors": [
+    "Artyom 'Sleepwalker' Fedosov <mail@asleepwalker.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
