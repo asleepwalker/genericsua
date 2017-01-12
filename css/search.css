@@ -157,12 +157,12 @@
 .results .about .generics {
 	display: block;
 	float: none;
-	margin: 18px 0 0;
+	margin: 23px 0 0;
 }
 
 .results .about .generics h3 {
-	color: black;
-	font-size: 14px;
+	color: #222;
+	font: bold 16px "Arial", sans-serif;
 }
 
 .results .about .generics ul {
@@ -171,6 +171,7 @@
 
 .results .about .generics li {
 	font-size: 13px;
+	margin: 4px 0;
 }
 
 @media (min-width: 480px) {
