@@ -98,7 +98,7 @@ footer {
 	border-top: 1px solid #DDD;
 	bottom: 0;
 	padding: 7px 0 17px;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 }
 
