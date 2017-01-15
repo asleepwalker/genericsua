@@ -235,6 +235,10 @@ footer nav li.author a:hover .icon {
 }
 
 @media (min-width: 1004px) {
+	main {
+		padding-bottom: 100px !important;
+	}
+
 	header {
 		padding: 12px 0 12px 100px;
 	}
