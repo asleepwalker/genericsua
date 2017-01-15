@@ -1,16 +1,20 @@
-h1 {
-	font: 24px "Arial", sans-serif;
+main {
 	margin: 20px 15px 0 12px;
+}
+
+h1 {
+	color: #222;
+	font: 24px "Arial", sans-serif;
 }
 
 .producer {
 	color: #444;
 	font: 11px "Arial", sans-serif;
-	margin: 2px 15px 0 12px;
+	margin-top: 2px;
 }
 
 section {
-	margin: 23px 15px 0 12px;
+	margin-top: 23px;
 }
 
 section h2 {
@@ -18,8 +22,8 @@ section h2 {
 	font: bold 16px "Arial", sans-serif;
 }
 
-section.briefly {
-	margin: 15px 15px 0 12px;
+.briefly {
+	margin-top: 15px;
 }
 
 .photo {
@@ -36,25 +40,22 @@ section.briefly {
 	font: 12px "Arial", sans-serif;
 }
 
-.options ul,
-.generics ul {
+.items-cols ul {
 	list-style: none;
 	margin-top: 10px;
 }
 
-.options li,
-.generics li {
-	font: 13px "Arial", sans-serif;
+.items-cols li {
+	font: 13px/1.3 "Arial", sans-serif;
 	margin: 4px 0;
 }
 
-.generics li a {
+.items-cols .generics li a {
 	color: #15C;
 	text-decoration: none;
 }
 
-.options .price,
-.generics .price {
+.items-cols .price {
 	border-radius: 3px;
 	color: white;
 	display: inline-block;
@@ -64,48 +65,43 @@ section.briefly {
 	vertical-align: middle;
 }
 
-.options .price {
+.items-cols .options .price {
 	background: #f8f8f8;
 	border: 1px solid #28A6FF;
 	color: black;
 	padding: 2px 5px;
 }
 
-.generics .price.cheap {
+.items-cols .generics .price.cheap {
 	background: #03D000;
 }
 
-.generics .price.acceptable {
+.items-cols .generics .price.acceptable {
 	background: #FF9900;
 }
 
-.generics .price.pricey {
+.items-cols .generics .price.pricey {
 	background: #FF4700;
 }
 
-.generics .price.overpriced {
+.items-cols .generics .price.overpriced {
 	background: #D60000;
 }
 
 @media (min-width: 480px) {
-	h1 {
-		font-size: 28px;
+	main {
 		margin: 20px 18px 0 15px;
 	}
 
-	.producer {
-		margin: 2px 18px 0 15px;
+	h1 {
+		font-size: 28px;
 	}
 
 	section {
-		margin: 26px 18px 0 15px;
+		margin-top: 26px;
 	}
 
-	section.briefly {
-		margin: 15px 18px 0 15px;
-	}
-
-	section.briefly:after {
+	.briefly:after {
 		clear: both;
 		content: '';
 		display: block;
@@ -125,8 +121,17 @@ section.briefly {
 }
 
 @media (min-width: 666px) {
+	main {
+		margin: 22px 20px 0 18px;
+	}
+
+	.description {
+		font-size: 13px;
+	}
+
 	.items-cols {
-		margin: 26px 0 0 15px;
+		margin-top: 35px;
+		max-width: 735px;
 		width: 90%;
 	}
 
@@ -143,23 +148,63 @@ section.briefly {
 		padding-right: 5%;
 	}
 
-	.items-cols section.options {
+	.items-cols .options {
 		width: 60%;
 	}
 
-	.items-cols section.generics {
+	.items-cols .generics {
 		width: 40%;
 	}
 }
 
 @media (min-width: 1004px) {
+	main {
+		margin: 45px 70px 0 98px;
+	}
+
 	h1 {
 		font-size: 36px;
-		margin: 45px 70px 0 98px;
 	}
 
 	.producer {
 		font-size: 13px;
-		margin: 2px 0 0 98px;
+		margin-top: 3px;
+	}
+
+	section h2 {
+		font-size: 24px;
+		font-weight: normal;
+	}
+
+	.briefly {
+		margin-top: 25px;
+	}
+
+	.photo {
+		margin: 0 0 0 -56px;
+		max-width: none;
+		width: 250px;
+	}
+
+	.description {
+		float: left;
+		font-size: 14px;
+		line-height: 1.3;
+		margin-left: 17px;
+		max-width: 540px;
+		width: calc(100% - 305px);
+	}
+
+	.items-cols {
+		margin-top: 40px;
+	}
+
+	.items-cols ul {
+		margin-top: 15px;
+	}
+
+	.items-cols li {
+		font-size: 14px;
+		margin: 5px 0;
 	}
 }

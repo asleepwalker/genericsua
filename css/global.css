@@ -94,7 +94,7 @@ header form.search button.submit:hover {
 }
 
 main {
-	padding-bottom: 120px;
+	padding-bottom: 120px !important;
 }
 
 footer {
@@ -171,6 +171,10 @@ footer nav li.author a:hover .icon {
 }
 
 @media (min-width: 666px) {
+	header {
+		padding: 12px 20px 12px 18px;
+	}
+
 	header form.search {
 		max-width: 540px;
 	}
@@ -205,7 +209,7 @@ footer nav li.author a:hover .icon {
 
 @media (min-width: 768px) {
 	main {
-		padding-bottom: 80px;
+		padding-bottom: 80px !important;
 	}
 
 	footer {
