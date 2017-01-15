@@ -6,7 +6,7 @@ h1 {
 .producer {
 	color: #444;
 	font: 11px "Arial", sans-serif;
-	margin: 2px 0 0 12px;
+	margin: 2px 15px 0 12px;
 }
 
 section {
@@ -88,6 +88,23 @@ section.briefly {
 }
 
 @media (min-width: 480px) {
+	h1 {
+		font-size: 28px;
+		margin: 20px 18px 0 15px;
+	}
+
+	.producer {
+		margin: 2px 18px 0 15px;
+	}
+
+	section {
+		margin: 26px 18px 0 15px;
+	}
+
+	section.briefly {
+		margin: 15px 18px 0 15px;
+	}
+
 	section.briefly:after {
 		clear: both;
 		content: '';
@@ -100,6 +117,38 @@ section.briefly {
 		margin: 0 15px 5px 0px;
 		max-width: 180px;
 		width: 30%;
+	}
+
+	.description {
+		max-width: 735px;
+	}
+}
+
+@media (min-width: 666px) {
+	.items-cols {
+		margin: 26px 0 0 15px;
+		width: 90%;
+	}
+
+	.items-cols:after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+
+	.items-cols section {
+		box-sizing: border-box;
+		float: left;
+		margin: 0;
+		padding-right: 5%;
+	}
+
+	.items-cols section.options {
+		width: 60%;
+	}
+
+	.items-cols section.generics {
+		width: 40%;
 	}
 }
 
