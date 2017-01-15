@@ -1,12 +1,14 @@
 .wrapper {
 	background: #f8fbff url('../i/bg-pattern.jpg');
 	min-height: 384px;
+	height: 100%;
 }
 
 main {
 	min-width: 320px;
+	padding-bottom: 25px;
 	position: absolute;
-	top: 47%;
+	top: 50%;
 	transform: translateY(-50%);
 	width: 100%;
 }
@@ -127,6 +129,6 @@ footer {
 
 @media (min-width: 768px) {
 	main {
-		top: 50%;
+		padding-bottom: 0;
 	}
 }
