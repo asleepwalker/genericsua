@@ -3,7 +3,7 @@
 	$url = trim($request['path'], '/');
 	$url = explode('/', $url);
 
-	$query = "SELECT `id`, `name`, `description`, `url` FROM `products` WHERE `url` LIKE '%".addslashes($url[1])."%'";
+	$query = "SELECT `id`, `name`, `description`, `url` FROM `products` WHERE `url` = '".addslashes($url[1])."'";
 	$data = database_query($query);
 	$product = mysql_fetch_assoc($data);
 
