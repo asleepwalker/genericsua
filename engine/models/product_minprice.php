@@ -13,6 +13,8 @@
 		}
 
 		foreach ($products as &$product) {
-			$product['price'] = $all_prices[$product['id']];
+			if (array_key_exists($product['id'], $all_prices)) {
+				$product['price'] = $all_prices[$product['id']];
+			}
 		}
 	}

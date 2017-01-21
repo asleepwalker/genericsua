@@ -35,6 +35,10 @@
 	text-decoration: underline;
 }
 
+.results h2.unavailable a {
+	color: #555;
+}
+
 .results h2 .price {
 	border-radius: 3px;
 	color: white;
@@ -168,32 +172,6 @@
 
 .results .generics a:hover {
 	text-decoration: underline;
-}
-
-.results .generics .price {
-	border-radius: 3px;
-	color: white;
-	display: inline-block;
-	font-size: 80%;
-	margin-left: 2px;
-	padding: 3px 6px;
-	vertical-align: middle;
-}
-
-.results .generics .price.cheap {
-	background: #03D000;
-}
-
-.results .generics .price.acceptable {
-	background: #FF9900;
-}
-
-.results .generics .price.pricey {
-	background: #FF4700;
-}
-
-.results .generics .price.overpriced {
-	background: #D60000;
 }
 
 .results .about .generics {

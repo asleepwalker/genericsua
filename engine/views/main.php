@@ -20,7 +20,7 @@
 					<button class="submit" type="submit">Найти препарат</button>
 				</form>
 			</main>
-			<?php include('footer.php'); ?>
+			<? include('footer.php'); ?>
 		</div>
 	</body>
 </html>

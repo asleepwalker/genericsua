@@ -10,9 +10,9 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<?php include('header.php'); ?>
+			<? include('header.php'); ?>
 			<main>
-				<h1><?= $product['name'] ?></h1>
+				<h1<? if (count($forms['available']) == 0) { ?> class="unavailable" title="Нет в аптеках" <? } ?>><?= $product['name'] ?><? if (count($forms['available']) > 0) { ?> <span class="price"><?= floor($forms['available'][0]['price']) ?> грн</span><? } ?></h1>
 				<!--<p class="producer"><span class="flag-icon flag-icon-gb"></span> Reckitt Benckiser</p>-->
 				<section class="briefly">
 					<div class="photo">
@@ -37,14 +37,15 @@
 					<section class="generics">
 						<h2>Аналоги препарата</h2>
 						<ul>
-							<? foreach ($generics as &$generic) { ?>
-								<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price cheap"><?= $generic['price'] ?> грн</span></li>
-							<? } ?>
+							<? foreach ($generics as &$generic) {
+								if (isset($generic['price'])) { ?>
+										<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price cheap"><?= $generic['price'] ?> грн</span></li>
+							<? } } ?>
 						</ul>
 					</section>
 				</div>
 			</main>
-			<?php include('footer.php'); ?>
+			<? include('footer.php'); ?>
 		</div>
 	</body>
 </html>

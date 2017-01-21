@@ -7,6 +7,10 @@ h1 {
 	font: 24px "Arial", sans-serif;
 }
 
+h1.unavailable {
+	color: #555;
+}
+
 .producer {
 	color: #444;
 	font: 11px "Arial", sans-serif;

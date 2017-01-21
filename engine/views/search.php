@@ -10,17 +10,17 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<?php include('header.php'); ?>
+			<? include('header.php'); ?>
 			<main>
 				<div class="status">Найдено: <?= count($products) ?> препарат</div>
 				<section class="results">
-					<?php foreach ($products as &$product) { ?>
+					<? foreach ($products as &$product) { ?>
 						<div class="item">
 							<div class="photo">
 								<img src="/uploads/nurofen.jpg" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">
 							</div>
 							<div class="about">
-								<h2><a href="/product/<?= $product['url'] ?>/"><?= $product['name'] ?></a> <span class="price acceptable"><?= $product['price'] ?> грн</span></h2>
+								<h2<? if ($product['price'] == 0) { ?> class="unavailable" title="Нет в аптеках"<? } ?>><a href="/product/<?= $product['url'] ?>/"><?= $product['name'] ?></a><? if ($product['price'] != 0) { ?> <span class="price acceptable"><?= $product['price'] ?> грн</span><? } ?></h2>
 								<!--<p class="producer"><span class="flag-icon flag-icon-gb"></span> Reckitt Benckiser</p>-->
 								<div class="description">
 									<p class="main"><?= $product['description'] ?></p>
@@ -31,16 +31,16 @@
 							<div class="generics">
 								<h3>Аналоги</h3>
 								<ul>
-									<?php foreach ($product['generics'] as &$generic) { ?>
+									<? foreach ($product['generics'] as &$generic) { ?>
 										<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price cheap"><?= $generic['price'] ?> грн</span></li>
-									<?php } ?>
+									<? } ?>
 								</ul>
 							</div>
 						</div>
-					<?php } ?>
+					<? } ?>
 				</section>
 			</main>
-			<?php include('footer.php'); ?>
+			<? include('footer.php'); ?>
 		</div>
 	</body>
 </html>
