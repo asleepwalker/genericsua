@@ -50,6 +50,10 @@ section h2 {
 	margin: 4px 0;
 }
 
+.items-cols .options li.unavailable .name {
+	color: #999;
+}
+
 .items-cols .generics li a {
 	color: #15C;
 	text-decoration: none;

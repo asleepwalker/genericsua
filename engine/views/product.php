@@ -26,9 +26,12 @@
 					<section class="options">
 						<h2>Выпускается в формах</h2>
 						<ul>
-							<? foreach ($forms as &$form) { ?>
-								<li><span class="name"><?= $form['name'] ?></span> <span class="price cheap"><?= floor($form['price']) ?> грн</span></li>
+							<? foreach ($forms['available'] as &$form) { ?>
+								<li><span class="name"><?= $form['name'] ?></span> <span class="price"><?= floor($form['price']) ?> грн</span></li>
+							<? } foreach ($forms['absent'] as &$form) { ?>
+								<li class="unavailable"><span class="name" title="Нет в аптеках"><?= $form['name'] ?></span></li>
 							<? } ?>
+
 						</ul>
 					</section>
 					<section class="generics">
