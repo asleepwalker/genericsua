@@ -21,7 +21,9 @@
 							</div>
 							<div class="about">
 								<h2<? if ($product['price'] == 0) { ?> class="unavailable" title="Нет в аптеках"<? } ?>><a href="/product/<?= $product['url'] ?>/"><?= $product['name'] ?></a><? if ($product['price'] != 0) { ?> <span class="price <?= $product['color'] ?>"><?= $product['price'] ?> грн</span><? } ?></h2>
-								<!--<p class="producer"><span class="flag-icon flag-icon-gb"></span> Reckitt Benckiser</p>-->
+								<? if (isset($product['producer'])) { ?>
+									<p class="producer"><? if (isset($product['country'])) { ?><span class="flag-icon flag-icon-<?= $product['country'] ?>"></span> <? } ?><?= $product['producer'] ?></p>
+								<? } ?>
 								<div class="description">
 									<p class="main"><?= $product['description'] ?></p>
 									<p><a class="more" href="/product/<?= $product['url'] ?>/">Узнать больше...</a></p>

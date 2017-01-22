@@ -13,7 +13,9 @@
 			<? include('header.php'); ?>
 			<main>
 				<h1<? if (!isset($product['price'])) { ?> class="unavailable" title="Нет в аптеках" <? } ?>><?= $product['name'] ?><? if (isset($product['price'])) { ?> <span class="price <?= $product['color'] ?>"><?= floor($product['price']) ?> грн</span><? } ?></h1>
-				<!--<p class="producer"><span class="flag-icon flag-icon-gb"></span> Reckitt Benckiser</p>-->
+				<? if (isset($product['producer'])) { ?>
+					<p class="producer"><? if (isset($product['country'])) { ?><span class="flag-icon flag-icon-<?= $product['country'] ?>"></span> <? } ?><?= $product['producer'] ?></p>
+				<? } ?>
 				<section class="briefly">
 					<div class="photo">
 						<img src="/uploads/nurofen.jpg" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">

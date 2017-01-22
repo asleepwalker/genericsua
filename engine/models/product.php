@@ -3,7 +3,7 @@
 	$url = trim($request['path'], '/');
 	$url = explode('/', $url);
 
-	$query = "SELECT `id`, `name`, `description`, `url` FROM `products` WHERE `url` = '".addslashes($url[1])."' AND `published` = 1";
+	$query = "SELECT `product`.`id`, `product`.`name`, `product`.`description`, `product`.`url`, `producers`.`name` AS `producer`, `producers`.`country` FROM (SELECT `id`, `name`, `description`, `url`, `producer` FROM `products` WHERE `url` = '".addslashes($url[1])."' AND `published` = 1) AS `product` LEFT JOIN `producers` ON `product`.`producer` = `producers`.`id`";
 	$data = database_query($query);
 	$product = mysql_fetch_assoc($data);
 
