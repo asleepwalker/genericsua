@@ -63,37 +63,11 @@ section h2 {
 	text-decoration: none;
 }
 
-.items-cols .price {
-	border-radius: 3px;
-	color: white;
-	display: inline-block;
-	font-size: 80%;
-	margin-left: 2px;
-	padding: 3px 6px;
-	vertical-align: middle;
-}
-
 .items-cols .options .price {
 	background: #f8f8f8;
 	border: 1px solid #28A6FF;
 	color: black;
 	padding: 2px 5px;
-}
-
-.items-cols .generics .price.cheap {
-	background: #03D000;
-}
-
-.items-cols .generics .price.acceptable {
-	background: #FF9900;
-}
-
-.items-cols .generics .price.pricey {
-	background: #FF4700;
-}
-
-.items-cols .generics .price.overpriced {
-	background: #D60000;
 }
 
 @media (min-width: 480px) {

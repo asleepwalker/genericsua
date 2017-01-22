@@ -12,3 +12,7 @@
 	}
 
 	join_minprices($products);
+
+	foreach ($products as &$product) {
+		$product['color'] = compare_price($product['price'], $product['generics']);
+	}

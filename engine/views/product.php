@@ -12,7 +12,7 @@
 		<div class="wrapper">
 			<? include('header.php'); ?>
 			<main>
-				<h1<? if (count($forms['available']) == 0) { ?> class="unavailable" title="Нет в аптеках" <? } ?>><?= $product['name'] ?><? if (count($forms['available']) > 0) { ?> <span class="price"><?= floor($forms['available'][0]['price']) ?> грн</span><? } ?></h1>
+				<h1<? if (!isset($product['price'])) { ?> class="unavailable" title="Нет в аптеках" <? } ?>><?= $product['name'] ?><? if (isset($product['price'])) { ?> <span class="price <?= $product['color'] ?>"><?= floor($product['price']) ?> грн</span><? } ?></h1>
 				<!--<p class="producer"><span class="flag-icon flag-icon-gb"></span> Reckitt Benckiser</p>-->
 				<section class="briefly">
 					<div class="photo">
@@ -38,7 +38,7 @@
 						<h2>Аналоги препарата</h2>
 						<ul>
 							<? foreach ($generics as &$generic) { ?>
-								<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price cheap"><?= $generic['price'] ?> грн</span></li>
+								<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price <?= $generic['color'] ?>"><?= $generic['price'] ?> грн</span></li>
 							<? } ?>
 						</ul>
 					</section>

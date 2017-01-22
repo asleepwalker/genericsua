@@ -20,7 +20,7 @@
 								<img src="/uploads/nurofen.jpg" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">
 							</div>
 							<div class="about">
-								<h2<? if ($product['price'] == 0) { ?> class="unavailable" title="Нет в аптеках"<? } ?>><a href="/product/<?= $product['url'] ?>/"><?= $product['name'] ?></a><? if ($product['price'] != 0) { ?> <span class="price acceptable"><?= $product['price'] ?> грн</span><? } ?></h2>
+								<h2<? if ($product['price'] == 0) { ?> class="unavailable" title="Нет в аптеках"<? } ?>><a href="/product/<?= $product['url'] ?>/"><?= $product['name'] ?></a><? if ($product['price'] != 0) { ?> <span class="price <?= $product['color'] ?>"><?= $product['price'] ?> грн</span><? } ?></h2>
 								<!--<p class="producer"><span class="flag-icon flag-icon-gb"></span> Reckitt Benckiser</p>-->
 								<div class="description">
 									<p class="main"><?= $product['description'] ?></p>
@@ -32,7 +32,7 @@
 								<h3>Аналоги</h3>
 								<ul>
 									<? foreach ($product['generics'] as &$generic) { ?>
-										<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price cheap"><?= $generic['price'] ?> грн</span></li>
+										<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price <?= $generic['color'] ?>"><?= $generic['price'] ?> грн</span></li>
 									<? } ?>
 								</ul>
 							</div>

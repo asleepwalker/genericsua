@@ -166,16 +166,20 @@ footer nav li.author a:hover .icon {
 	background: #03D000;
 }
 
+.price.good {
+	background: #BDCA00;
+}
+
 .price.acceptable {
-	background: #FF9900;
+	background: #FF8100;
 }
 
 .price.pricey {
-	background: #FF4700;
+	background: #F72402;
 }
 
 .price.overpriced {
-	background: #D60000;
+	background: #BB0000;
 }
 
 h1 .price,
