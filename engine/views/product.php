@@ -37,10 +37,9 @@
 					<section class="generics">
 						<h2>Аналоги препарата</h2>
 						<ul>
-							<? foreach ($generics as &$generic) {
-								if (isset($generic['price'])) { ?>
-										<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price cheap"><?= $generic['price'] ?> грн</span></li>
-							<? } } ?>
+							<? foreach ($generics as &$generic) { ?>
+								<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price cheap"><?= $generic['price'] ?> грн</span></li>
+							<? } ?>
 						</ul>
 					</section>
 				</div>
