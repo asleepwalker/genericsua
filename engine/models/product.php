@@ -3,11 +3,11 @@
 	$url = trim($request['path'], '/');
 	$url = explode('/', $url);
 
-	$query = "SELECT `id`, `name`, `description`, `url` FROM `products` WHERE `url` = '".addslashes($url[1])."'";
+	$query = "SELECT `id`, `name`, `description`, `url` FROM `products` WHERE `url` = '".addslashes($url[1])."' AND `published` = 1";
 	$data = database_query($query);
 	$product = mysql_fetch_assoc($data);
 
-	$query = "SELECT `name`, `price` FROM `items` WHERE `product` = ".$product['id']." ORDER BY `price`";
+	$query = "SELECT `name`, `price` FROM `items` WHERE `product` = ".$product['id']." OR `group` = ".$product['id']." ORDER BY `price`";
 	$data = database_query($query);
 	$forms = array('available' => array(), 'absent' => array());
 	while ($form = mysql_fetch_assoc($data)) {

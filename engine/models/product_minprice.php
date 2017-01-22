@@ -8,7 +8,7 @@
 		$data = database_query($query);
 		while ($product = mysql_fetch_assoc($data)) {
 			$p_index = array_search($product['id'], $product_ids);
-			if ($product['price'] != 0) {
+			if ($p_index !== false && $product['price'] != 0) {
 				$products[$p_index]['price'] = floor($product['price']);
 			}
 		}

@@ -3,7 +3,7 @@
 	include_once('product_generics.php');
 	include_once('product_minprice.php');
 
-	$query = "SELECT `id`, `name`, `description`, `url` FROM `products` WHERE `name` LIKE '%".addslashes($_GET['q'])."%'";
+	$query = "SELECT `id`, `name`, `description`, `url` FROM `products` WHERE `name` LIKE '%".addslashes($_GET['q'])."%' AND `published` = 1";
 	$data = database_query($query);
 	$products = array();
 	while ($product = mysql_fetch_assoc($data)) {
