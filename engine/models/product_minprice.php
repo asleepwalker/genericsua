@@ -1,20 +1,15 @@
 <?php
 
-	function join_minprices(&$products) {
-		$all_products = array();
-		foreach ($products as &$product) {
-			$all_products[] = $product['id'];
-		}
-		$query = "SELECT * FROM (SELECT `product` AS `id`, `price` FROM `items` WHERE `product` IN (".implode($all_products, ',').") AND `price` != 0 ORDER BY `price`) AS `ordered` GROUP BY `id`";
-		$data = database_query($query);
-		$all_prices = array();
-		while ($product1 = mysql_fetch_assoc($data)) {
-			$all_prices[$product1['id']] = floor($product1['price']);
-		}
+	include_once($apppath.'assets/array_column_polyfill.php');
 
-		foreach ($products as &$product) {
-			if (array_key_exists($product['id'], $all_prices)) {
-				$product['price'] = $all_prices[$product['id']];
+	function join_minprices(&$products) {
+		$product_ids = array_column($products, 'id');
+		$query = "SELECT * FROM (SELECT `product` AS `id`, `price` FROM `items` WHERE `product` IN (".implode($product_ids, ',').") AND `price` != 0 ORDER BY `price`) AS `ordered` GROUP BY `id`";
+		$data = database_query($query);
+		while ($product = mysql_fetch_assoc($data)) {
+			$p_index = array_search($product['id'], $product_ids);
+			if ($product['price'] != 0) {
+				$products[$p_index]['price'] = floor($product['price']);
 			}
 		}
 	}
