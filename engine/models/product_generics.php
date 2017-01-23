@@ -25,6 +25,10 @@
 	}
 
 	function compare_price($price, $generics) {
+		if (count($generics) < 2) {
+			return 'cheap';
+		}
+
 		$min = $generics[0]['price'];
 		$max = $generics[count($generics) - 1]['price'];
 		$relative = ($price - $min) / ($max - $min);
