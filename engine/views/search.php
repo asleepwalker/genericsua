@@ -32,11 +32,15 @@
 							</div>
 							<div class="generics">
 								<h3>Аналоги</h3>
-								<ul>
-									<? foreach ($product['generics'] as &$generic) { ?>
-										<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price <?= $generic['color'] ?>"><?= $generic['price'] ?> грн</span></li>
-									<? } ?>
-								</ul>
+								<? if (count($product['generics'])) { ?>
+									<ul>
+										<? foreach ($product['generics'] as &$generic) { ?>
+											<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price <?= $generic['color'] ?>"><?= $generic['price'] ?> грн</span></li>
+										<? } ?>
+									</ul>
+								<? } else { ?>
+									<p class="empty">Не найдены</p>
+								<? } ?>
 							</div>
 						</div>
 					<? } ?>

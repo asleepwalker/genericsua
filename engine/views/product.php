@@ -27,22 +27,29 @@
 				<div class="items-cols">
 					<section class="options">
 						<h2>Выпускается в формах</h2>
-						<ul>
-							<? foreach ($forms['available'] as &$form) { ?>
-								<li><span class="name"><?= $form['name'] ?></span> <span class="price"><?= floor($form['price']) ?> грн</span></li>
-							<? } foreach ($forms['absent'] as &$form) { ?>
-								<li class="unavailable"><span class="name" title="Нет в аптеках"><?= $form['name'] ?></span></li>
-							<? } ?>
-
-						</ul>
+						<? if (count($forms['available']) + count($forms['absent'])) { ?>
+							<ul>
+								<? foreach ($forms['available'] as &$form) { ?>
+									<li><span class="name"><?= $form['name'] ?></span> <span class="price"><?= floor($form['price']) ?> грн</span></li>
+								<? } foreach ($forms['absent'] as &$form) { ?>
+									<li class="unavailable"><span class="name" title="Нет в аптеках"><?= $form['name'] ?></span></li>
+								<? } ?>
+							</ul>
+						<? } else { ?>
+							<p class="empty">Не найдены</p>
+						<? } ?>
 					</section>
 					<section class="generics">
 						<h2>Аналоги препарата</h2>
-						<ul>
-							<? foreach ($generics as &$generic) { ?>
-								<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price <?= $generic['color'] ?>"><?= $generic['price'] ?> грн</span></li>
-							<? } ?>
-						</ul>
+						<? if (count($generics)) { ?>
+							<ul>
+								<? foreach ($generics as &$generic) { ?>
+									<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price <?= $generic['color'] ?>"><?= $generic['price'] ?> грн</span></li>
+								<? } ?>
+							</ul>
+						<? } else { ?>
+							<p class="empty">Не найдены</p>
+						<? } ?>
 					</section>
 				</div>
 			</main>
