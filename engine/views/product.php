@@ -18,7 +18,7 @@
 				<? } ?>
 				<section class="briefly">
 					<div class="photo">
-						<img src="/uploads/nurofen.jpg" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">
+						<img src="/i/default.jpg" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">
 					</div>
 					<div class="description">
 						<p><?= $product['description'] ?></p>
