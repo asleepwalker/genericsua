@@ -14,7 +14,7 @@
 			<main>
 				<h1<? if (!isset($product['price'])) { ?> class="unavailable" title="Нет в аптеках" <? } ?>><?= $product['name'] ?><? if (isset($product['price'])) { ?> <span class="price <?= $product['color'] ?>"><?= floor($product['price']) ?> грн</span><? } ?></h1>
 				<? if (isset($product['producer'])) { ?>
-					<p class="producer"><? if (isset($product['country'])) { ?><span class="flag-icon flag-icon-<?= $product['country'] ?>"></span> <? } ?><?= $product['producer'] ?></p>
+					<p class="producer"><? if ($product['country']) { ?><span class="flag-icon flag-icon-<?= $product['country'] ?>"></span> <? } ?><?= $product['producer'] ?></p>
 				<? } ?>
 				<section class="briefly">
 					<div class="photo">
