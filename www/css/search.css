@@ -61,7 +61,6 @@
 
 .results .description p.main {
 	box-sizing: border-box;
-	max-height: 123px;
 	overflow: hidden;
 	position: relative;
 }
@@ -112,6 +111,12 @@
 	background: #006EDE;
 }
 
+.results .no-generics {
+	color: #4C4C4C;
+	font: 12px "Arial", sans-serif;
+	margin-top: 16px;
+}
+
 .results .photo {
 	display: none;
 }
@@ -136,7 +141,6 @@
 	box-sizing: border-box;
 	list-style: none;
 	margin-top: 15px;
-	max-height: 134px;
 	overflow: hidden;
 	position: relative;
 }
@@ -144,6 +148,10 @@
 .results .generics li {
 	font: 14px/1.3 sans-serif;
 	margin: 5px 0;
+}
+
+.results .generics li:nth-child(n+7) {
+	display: none;
 }
 
 .results .generics li:first-child {
@@ -157,6 +165,12 @@
 
 .results .generics a:hover {
 	text-decoration: underline;
+}
+
+.results .generics .folded {
+	color: #222;
+	font: 12px/1.3 sans-serif;
+	margin-top: 2px;
 }
 
 .results .generics .empty {
@@ -184,6 +198,14 @@
 .results .about .generics li {
 	font-size: 13px;
 	margin: 4px 0;
+}
+
+.results .about .generics li:nth-child(n+7) {
+	display: block;
+}
+
+.results .about .generics .folded {
+	display: none;
 }
 
 .results .about .generics .empty {
@@ -240,6 +262,7 @@
 	}
 
 	.results button.details,
+	.results .no-generics,
 	.results .about .generics {
 		display: none;
 	}
@@ -287,10 +310,6 @@
 
 	.results .generics h3 {
 		font-size: 20px;
-	}
-
-	.results .generics ul {
-		max-height: 141px;
 	}
 }
 

@@ -28,7 +28,11 @@
 									<p class="main"><?= $product['description'] ?></p>
 									<p><a class="more" href="/product/<?= $product['url'] ?>/">Узнать больше...</a></p>
 								</div>
-								<button class="details">Показать аналоги (8)</button>
+								<? if (count($product['generics'])) { ?>
+									<button class="details">Показать аналоги (<?= count($product['generics']) ?>)</button>
+								<? } else { ?>
+									<p class="no-generics">Аналоги не найдены</p>
+								<? } ?>
 							</div>
 							<div class="generics">
 								<h3>Аналоги</h3>
@@ -38,6 +42,9 @@
 											<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price <?= $generic['color'] ?>"><?= $generic['price'] ?> грн</span></li>
 										<? } ?>
 									</ul>
+									<? if (count($product['generics']) > 6) { ?>
+										<p class="folded">...и ещё <?= (count($product['generics']) - 6) ?> других</p>
+									<? } ?>
 								<? } else { ?>
 									<p class="empty">Не найдены</p>
 								<? } ?>
