@@ -16,7 +16,7 @@
 				</div>
 				<form class="search" action="/search/" method="get">
 					<input name="q" type="search" autocomplete="off" autofocus required>
-					<p class="example">Например, <span class="pseudo">Нурофен</span></p>
+					<p class="example">Например, <span class="pseudo" data-product="nurofen">Нурофен</span></p>
 					<button class="submit" type="submit">Найти препарат</button>
 				</form>
 			</main>
@@ -25,5 +25,6 @@
 		<link rel="stylesheet" href="/bower_components/awesomplete/awesomplete.css">
 		<script src="/bower_components/awesomplete/awesomplete.min.js"></script>
 		<script src="/js/suggest.js"></script>
+		<script src="/js/main.js"></script>
 	</body>
 </html>
