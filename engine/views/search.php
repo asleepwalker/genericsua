@@ -12,7 +12,8 @@
 		<div class="wrapper">
 			<? include('header.php'); ?>
 			<main>
-				<div class="status">Найдено: <?= count($products) ?> препарат</div>
+				<? include($apppath.'assets/plural_form.php') ?>
+				<div class="status">Найдено: <?= count($products) ?> <?= get_plural_form(count($products), 'препарат', 'препарата', 'препаратов') ?></div>
 				<section class="results">
 					<? foreach ($products as &$product) { ?>
 						<div class="item">
