@@ -59,5 +59,6 @@
 		<link rel="stylesheet" href="/bower_components/awesomplete/awesomplete.css">
 		<script src="/bower_components/awesomplete/awesomplete.min.js"></script>
 		<script src="/js/suggest.js"></script>
+		<script src="/js/search.js"></script>
 	</body>
 </html>
