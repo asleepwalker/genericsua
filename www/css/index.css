@@ -58,6 +58,10 @@ form.search input::-webkit-search-results-decoration {
 	display: none;
 }
 
+form.search div.awesomplete {
+	position: relative;
+}
+
 form.search .example {
 	color: #447075;
 	float: left;

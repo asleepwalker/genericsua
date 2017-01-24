@@ -189,6 +189,11 @@ h2 .price {
 	padding: 5px 9px;
 }
 
+form.search div.awesomplete {
+	display: block;
+	position: static;
+}
+
 @media (min-width: 480px) {
 	header {
 		padding: 12px 18px 12px 15px;
@@ -242,6 +247,10 @@ h2 .price {
 
 	header form.search button.submit .label {
 		display: inline;
+	}
+
+	header form.search div.awesomplete > ul {
+		top: 100%; /* Hack to deal with floating elements */
 	}
 }
 
