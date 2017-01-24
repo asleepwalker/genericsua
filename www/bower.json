@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "flag-icon-css": "~2.8.0"
+    "flag-icon-css": "~2.8.0",
+    "awesomplete": "~1.1.1"
   }
 }

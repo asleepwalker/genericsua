@@ -58,5 +58,8 @@
 			</main>
 			<? include('footer.php'); ?>
 		</div>
+		<link rel="stylesheet" href="/bower_components/awesomplete/awesomplete.css">
+		<script src="/bower_components/awesomplete/awesomplete.min.js"></script>
+		<script src="/js/suggest.js"></script>
 	</body>
 </html>
