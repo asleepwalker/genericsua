@@ -44,7 +44,7 @@
 										<? } ?>
 									</ul>
 									<? if (count($product['generics']) > 6) { ?>
-										<p class="folded">...и ещё <?= (count($product['generics']) - 6) ?> других</p>
+										<p class="folded">...и ещё <?= (count($product['generics']) - 6) ?> <?= get_plural_form(count($product['generics']) - 6, 'другой', 'других', 'других') ?></p>
 									<? } ?>
 								<? } else { ?>
 									<p class="empty">Не найдены</p>
