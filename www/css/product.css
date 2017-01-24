@@ -44,6 +44,18 @@ section h2 {
 	font: 12px "Arial", sans-serif;
 }
 
+.description p {
+	margin-top: 8px;
+}
+
+.description p:first-child {
+	margin-top: 0;
+}
+
+.description p.disclaimer {
+	color: #D00000;
+}
+
 .items-cols ul {
 	list-style: none;
 	margin-top: 10px;

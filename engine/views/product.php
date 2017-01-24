@@ -21,7 +21,10 @@
 						<img src="/i/default.jpg" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">
 					</div>
 					<div class="description">
-						<p><?= $product['description'] ?></p>
+						<? if ($product['description']) { ?>
+							<p><?= $product['description'] ?></p>
+						<? } ?>
+						<p class="disclaimer">Обратите внимание, что у разных форм препарата состав может отличаться. Чтобы убедиться в адекватности замены, сравнивайте состав конкретных форм.</p>
 					</div>
 				</section>
 				<div class="items-cols">
