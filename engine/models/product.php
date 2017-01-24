@@ -14,10 +14,12 @@
 		$forms[$form['price'] != 0 ? 'available' : 'absent'][] = $form;
 	}
 
-	include_once('product_generics.php');
-	$generics = get_generics($product['id']);
-
 	if (count($forms['available']) > 0) {
 		$product['price'] = $forms['available'][0]['price'];
-		$product['color'] = compare_price($product['price'], $generics);
+	}
+
+	include_once('product_generics.php');
+	$generics = get_generics($product);
+	if (isset($product['price'])) {
+		$product['color'] = compare_price($product['price'], $generics, $product['price']);
 	}
