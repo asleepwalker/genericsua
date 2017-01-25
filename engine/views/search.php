@@ -13,7 +13,7 @@
 			<? include('header.php'); ?>
 			<main>
 				<? include($apppath.'assets/plural_form.php') ?>
-				<div class="status">Найдено: <?= count($products) ?> <?= get_plural_form(count($products), 'препарат', 'препарата', 'препаратов') ?></div>
+				<div class="status">Найдено: <?= $found ?> <?= get_plural_form($found, 'препарат', 'препарата', 'препаратов') ?></div>
 				<section class="results">
 					<? foreach ($products as &$product) { ?>
 						<div class="item">
@@ -52,6 +52,7 @@
 							</div>
 						</div>
 					<? } ?>
+					<? include('pagination.php'); ?>
 				</section>
 			</main>
 			<? include('footer.php'); ?>

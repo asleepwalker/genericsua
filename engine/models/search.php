@@ -1,9 +1,17 @@
 <?php
 
+	include_once('search_pagination.php');
 	include_once('product_generics.php');
 	include_once('product_minprice.php');
 
-	$query = "SELECT `product`.`id`, `product`.`name`, `product`.`description`, `product`.`url`, `producers`.`name` AS `producer`, `producers`.`country` FROM (SELECT `id`, `name`, `description`, `url`, `producer` FROM `products` WHERE `name` LIKE '%".addslashes($_GET['q'])."%' AND `published` = 1) AS `product` LEFT JOIN `producers` ON `product`.`producer` = `producers`.`id`";
+	$query = "SELECT COUNT(`id`) FROM `products` WHERE `name` LIKE '%".addslashes($_GET['q'])."%' AND `published` = 1";
+	$data = database_query($query);
+	$found = mysql_fetch_array($data)[0];
+
+	$per_page = 10;
+	$pagination = get_pagination($per_page, $found);
+
+	$query = "SELECT `product`.`id`, `product`.`name`, `product`.`description`, `product`.`url`, `producers`.`name` AS `producer`, `producers`.`country` FROM (SELECT `id`, `name`, `description`, `url`, `producer` FROM `products` WHERE `name` LIKE '%".addslashes($_GET['q'])."%' AND `published` = 1 LIMIT ".($pagination['current'] - 1).",".$per_page.") AS `product` LEFT JOIN `producers` ON `product`.`producer` = `producers`.`id`";
 	$data = database_query($query);
 	$products = array();
 	while ($product = mysql_fetch_assoc($data)) {
