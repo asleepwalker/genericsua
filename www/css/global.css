@@ -194,6 +194,38 @@ form.search div.awesomplete {
 	position: static;
 }
 
+form.search div.awesomplete > ul {
+	background: white;
+	border: 2px solid #8897FF;
+	border-radius: 0;
+	border-top: 1px solid #A2BAFF;
+	font: 13px "Arial", sans-serif;
+	margin-top: -2px;
+	padding: 1px 0 2px;
+	transition: none;
+}
+
+form.search div.awesomplete > ul:before {
+	display: none;
+}
+
+form.search div.awesomplete > ul > li {
+	color: #777;
+	cursor: pointer;
+	padding: 3px 8px 4px;
+}
+
+form.search div.awesomplete > ul > li:hover {
+	background: #C7DEE8;
+	color: #777;
+}
+
+form.search div.awesomplete mark,
+form.search div.awesomplete li:hover mark {
+	background: none;
+	color: black;
+}
+
 @media (min-width: 480px) {
 	header {
 		padding: 12px 18px 12px 15px;
@@ -250,7 +282,9 @@ form.search div.awesomplete {
 	}
 
 	header form.search div.awesomplete > ul {
-		top: 100%; /* Hack to deal with floating elements */
+		/* Hacks to deal with floating elements */
+		min-width: calc(100% - 130px);
+		top: 100%;
 	}
 }
 
