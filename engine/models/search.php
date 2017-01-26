@@ -4,6 +4,11 @@
 	include_once('product_generics.php');
 	include_once('product_minprice.php');
 
+	if (trim($_GET['q']) !== $_GET['q']) {
+		header('Location: /search/?q='.trim($_GET['q']));
+		exit();
+	}
+
 	$query = "SELECT COUNT(`id`) FROM `products` WHERE `name` LIKE '%".addslashes($_GET['q'])."%' AND `published` = 1";
 	$data = database_query($query);
 	$found = mysql_fetch_array($data)[0];

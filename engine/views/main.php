@@ -14,7 +14,7 @@
 					<img src="/i/logo.png" title="GenericsUA — дешевые аналоги лекарств в Украине" alt="GenericsUA">
 					<span class="about">дешевые аналоги лекарств</span>
 				</div>
-				<form class="search" action="/search/" method="get">
+				<form class="search" action="/search/" method="get" novalidate>
 					<input name="q" type="search" autocomplete="off" autofocus required>
 					<p class="example">Например, <span class="pseudo" data-product="nurofen">Нурофен</span></p>
 					<button class="submit" type="submit">Найти препарат</button>

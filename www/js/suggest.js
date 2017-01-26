@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-	var input = document.querySelector('form.search input');
+	var form = document.querySelector('form.search');
+	var input = form.querySelector('input');
 	var awesomplete = new Awesomplete(input, {
 		replace: function (selectedItem) {
 			input.value = selectedItem.label;
@@ -8,11 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 
 	input.onkeyup = function () {
+		var q = input.value.trim();
+		if (q === '') return;
+
 		var ajax = new XMLHttpRequest();
-		ajax.open('GET', '/suggest/?q=' + encodeURIComponent(input.value), true);
+		ajax.open('GET', '/suggest/?q=' + encodeURIComponent(q), true);
 		ajax.onload = function() {
 			awesomplete.list = JSON.parse(ajax.responseText);
 		};
 		ajax.send();
+	};
+
+	form.onsubmit = function () {
+		if (input.value.trim() === '') {
+			input.focus();
+			return false;
+		}
 	};
 });
