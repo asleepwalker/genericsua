@@ -16,7 +16,7 @@
 				</div>
 				<form class="search" action="/search/" method="get" novalidate>
 					<input name="q" type="search" autocomplete="off" autofocus required>
-					<p class="example">Например, <span class="pseudo" data-product="nurofen">Нурофен</span></p>
+					<p class="example">Например, <span class="pseudo" data-product="<?= $example['url'] ?>"><?= $example['name'] ?></span></p>
 					<button class="submit" type="submit">Найти препарат</button>
 				</form>
 			</main>
