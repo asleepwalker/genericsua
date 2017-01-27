@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Поиск «<?= htmlspecialchars($_GET['q']) ?>» | GenericsUA</title>
+		<title>Поиск «<?= htmlspecialchars($_GET['q']) ?>» — GenericsUA</title>
 		<? include('meta.php'); ?>
 		<link rel="stylesheet" href="/css/search.css">
 		<link rel="stylesheet" href="/bower_components/flag-icon-css/css/flag-icon.css">

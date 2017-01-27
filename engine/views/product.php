@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><?= $product['name'] ?> | GenericsUA</title>
+		<title><?= $product['name'] ?> — GenericsUA</title>
 		<? include('meta.php'); ?>
 		<link rel="stylesheet" href="/css/product.css">
 		<link rel="stylesheet" href="/bower_components/flag-icon-css/css/flag-icon.css">
