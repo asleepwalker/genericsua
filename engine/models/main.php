@@ -17,7 +17,8 @@
 		array('name' => 'Терафлю', 'url' => 'teraflyu'),
 		array('name' => 'Фервекс', 'url' => 'ferveks'),
 		array('name' => 'Фестал', 'url' => 'festal'),
-		array('name' => 'Упсарин Упса', 'url' => 'upsarin-upsa')
+		array('name' => 'Упсарин Упса', 'url' => 'upsarin-upsa'),
+		array('name' => 'Пиносол', 'url' => 'pinosol')
 	);
 
 	$example = $examples[array_rand($examples)];
