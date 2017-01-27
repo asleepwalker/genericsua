@@ -213,6 +213,32 @@
 	margin-top: 10px;
 }
 
+.results.not-found {
+	color: #222;
+	font: 13px "Arial", sans-serif;
+}
+
+.results.not-found p {
+	margin-top: 5px;
+}
+
+.results.not-found p:first-child {
+	margin-top: 0;
+}
+
+.results.not-found p.main {
+	margin-bottom: 25px;
+}
+
+.results.not-found a {
+	color: #15C;
+	text-decoration: none;
+}
+
+.results.not-found a:hover {
+	text-decoration: underline;
+}
+
 .pagination {
 	font: 14px "Arial", sans-serif;
 	display: block;
@@ -373,6 +399,11 @@
 
 	.results .generics h3 {
 		font-size: 20px;
+	}
+
+	.results.not-found {
+		font-size: 14px;
+		margin-left: 99px;
 	}
 
 	.pagination {
