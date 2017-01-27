@@ -10,6 +10,7 @@
 	}
 
 	function show_error() {
+		http_response_code(404);
 		include('views/error.php');
 		database_disconnect();
 		exit();
