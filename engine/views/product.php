@@ -2,9 +2,7 @@
 <html>
 	<head>
 		<title><?= $product['name'] ?> | GenericsUA</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="/css/global.css">
+		<? include('meta.php'); ?>
 		<link rel="stylesheet" href="/css/product.css">
 		<link rel="stylesheet" href="/bower_components/flag-icon-css/css/flag-icon.css">
 	</head>
