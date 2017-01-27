@@ -3,6 +3,11 @@
 	<head>
 		<title>Поиск «<?= htmlspecialchars($_GET['q']) ?>» — GenericsUA</title>
 		<? include('meta.php'); ?>
+		<meta name="description" content="Поиск по запросу «<?= addslashes($_GET['q']) ?>» — препараты, цены в аптеках и дешёвые аналоги.">
+		<meta property="og:description" content="Поиск по запросу «<?= addslashes($_GET['q']) ?>» — препараты, цены в аптеках и дешёвые аналоги.">
+		<meta property="og:title" content="Поиск «<?= htmlspecialchars($_GET['q']) ?>» — GenericsUA">
+		<meta property="og:url" content="http://generics.in.ua/search/?q=<?= addslashes($_GET['q']) ?>">
+		<meta property="og:image" content="http://generics.in.ua/i/default.jpg">
 		<link rel="stylesheet" href="/css/search.css">
 		<link rel="stylesheet" href="/bower_components/flag-icon-css/css/flag-icon.css">
 	</head>
@@ -17,7 +22,7 @@
 						<? foreach ($products as &$product) { ?>
 							<div class="item">
 								<div class="photo">
-									<img src="/i/default.jpg" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">
+									<img src="<?= $product['photo'] != '' ? '/uploads/'.$product['photo'] : '/i/default.jpg' ?>" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">
 								</div>
 								<div class="about">
 									<h2<? if ($product['price'] == 0) { ?> class="unavailable" title="Нет в аптеках"<? } ?>><a href="/product/<?= $product['url'] ?>/"><?= $product['name'] ?></a><? if ($product['price'] != 0) { ?> <span class="price <?= $product['color'] ?>"><?= $product['price'] ?> грн</span><? } ?></h2>

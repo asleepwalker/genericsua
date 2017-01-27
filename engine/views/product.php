@@ -3,6 +3,13 @@
 	<head>
 		<title><?= $product['name'] ?> — GenericsUA</title>
 		<? include('meta.php'); ?>
+		<? if ($product['description']) { ?>
+			<meta name="description" content="<?= addslashes($product['description']) ?>">
+			<meta property="og:description" content="<?= addslashes($product['description']) ?>">
+		<? } ?>
+		<meta property="og:title" content="<?= $product['name'] ?> — цены в аптеках и дешёвые аналоги">
+		<meta property="og:url" content="http://generics.in.ua/product/<?= $product['url'] ?>/">
+		<meta property="og:image" content="http://generics.in.ua/<?= $product['photo'] != '' ? '/uploads/'.$product['photo'] : '/i/default.jpg' ?>">
 		<link rel="stylesheet" href="/css/product.css">
 		<link rel="stylesheet" href="/bower_components/flag-icon-css/css/flag-icon.css">
 	</head>
@@ -16,7 +23,7 @@
 				<? } ?>
 				<section class="briefly">
 					<div class="photo">
-						<img src="/i/default.jpg" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">
+						<img src="<?= $product['photo'] != '' ? '/uploads/'.$product['photo'] : '/i/default.jpg' ?>" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">
 					</div>
 					<div class="description">
 						<? if ($product['description']) { ?>
