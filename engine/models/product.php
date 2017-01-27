@@ -7,6 +7,10 @@
 	$data = database_query($query);
 	$product = mysql_fetch_assoc($data);
 
+	if (!$product) {
+		show_error();
+	}
+
 	$query = "SELECT `name`, `price` FROM `items` WHERE `product` = ".$product['id']." OR `group` = ".$product['id']." ORDER BY `price`";
 	$data = database_query($query);
 	$forms = array('available' => array(), 'absent' => array());

@@ -8,7 +8,7 @@
 			if (filter_var($_GET['p'], FILTER_VALIDATE_INT) !== false && $_GET['p'] >= 1 && $_GET['p'] <= $total) {
 				$current = $_GET['p'];
 			} else {
-				die('404');
+				show_error();
 			}
 		}
 
