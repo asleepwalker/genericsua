@@ -24,7 +24,7 @@
 				$start = 1;
 				$finish = 7;
 			} elseif ($current > $total - 3) {
-				$start = $total - 7;
+				$start = $total - 6;
 				$finish = $total;
 			}
 
