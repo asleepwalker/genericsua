@@ -3,14 +3,17 @@
 	<head>
 		<title>Страница не найдена — GenericsUA</title>
 		<? include('meta.php'); ?>
-		<!--<link rel="stylesheet" href="/css/page.css">-->
+		<link rel="stylesheet" href="/css/page.css">
 	</head>
 	<body>
 		<div class="wrapper">
 			<? include('header.php'); ?>
 			<main>
 				<h1>Страница не найдена</h1>
-				<article></article>
+				<article>
+					<p>Запрошенная страница не найдена.</p>
+					<p>Возможно, она была перемещена, удалена или потеряна. Или вы допустили ошибку в адресе.</p>
+				</article>
 			</main>
 			<? include('footer.php'); ?>
 		</div>
