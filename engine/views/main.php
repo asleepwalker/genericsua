@@ -3,6 +3,12 @@
 	<head>
 		<title>GenericsUA — дешевые аналоги лекарств в Украине</title>
 		<? include('meta.php'); ?>
+		<meta name="description" content="Сервис «GenericsUA» призван максимально упростить поиск дешёвых аналогов известных препаратов.">
+		<meta name="keywords" content="дженерики, дешевые аналоги лекарств, препараты, цены в аптеках, genericsua">
+		<meta property="og:title" content="GenericsUA — дешевые аналоги лекарств в Украине">
+		<meta property="og:description" content="Сервис «GenericsUA» призван максимально упростить поиск дешёвых аналогов известных препаратов.">
+		<meta property="og:url" content="http://generics.in.ua/">
+		<meta property="og:image" content="http://generics.in.ua/i/logo.png">
 		<link rel="stylesheet" href="/css/index.css">
 	</head>
 	<body>
