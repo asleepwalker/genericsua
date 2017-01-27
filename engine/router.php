@@ -4,6 +4,7 @@
 		if     ($request['path'] == '/')                     return 'main';
 		elseif ($request['path'] == '/search/')              return 'search';
 		elseif (strpos($request['path'], '/product/') === 0) return 'product';
+		elseif (strpos($request['path'], '/page/') === 0)    return 'page';
 		elseif ($request['path'] == '/suggest/')             return 'suggest';
 		else                                                 show_error();
 	}
