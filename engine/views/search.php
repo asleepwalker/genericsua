@@ -20,17 +20,17 @@
 					<div class="status">Найдено: <?= $found ?> <?= get_plural_form($found, 'препарат', 'препарата', 'препаратов') ?></div>
 					<section class="results">
 						<? foreach ($products as &$product) { ?>
-							<div class="item">
+							<div class="item" itemscope itemtype="http://schema.org/Product">
 								<div class="photo">
-									<img src="<?= $product['photo'] != '' ? '/uploads/'.$product['photo'] : '/i/default.jpg' ?>" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>">
+									<img src="<?= $product['photo'] != '' ? '/uploads/'.$product['photo'] : '/i/default.jpg' ?>" title="<?= $product['name'] ?>" alt="<?= $product['name'] ?>"<? if ($product['photo'] != '') { ?> itemprop="image"<? } ?>>
 								</div>
 								<div class="about">
-									<h2<? if ($product['price'] == 0) { ?> class="unavailable" title="Нет в аптеках"<? } ?>><a href="/product/<?= $product['url'] ?>/"><?= $product['name'] ?></a><? if ($product['price'] != 0) { ?> <span class="price <?= $product['color'] ?>"><?= $product['price'] ?> грн</span><? } ?></h2>
+									<h2<? if ($product['price'] == 0) { ?> class="unavailable" title="Нет в аптеках"<? } ?>><a href="/product/<?= $product['url'] ?>/" itemprop="url"><span itemprop="name"><?= $product['name'] ?></span></a><? if ($product['price'] != 0) { ?> <span class="price <?= $product['color'] ?>"><?= $product['price'] ?> грн</span><? } ?></h2>
 									<? if (isset($product['producer'])) { ?>
-										<p class="producer"><? if ($product['country']) { ?><span class="flag-icon flag-icon-<?= $product['country'] ?>"></span> <? } ?><?= $product['producer'] ?></p>
+										<p class="producer"><? if ($product['country']) { ?><span class="flag-icon flag-icon-<?= $product['country'] ?>"></span> <? } ?><span itemprop="brand"><?= $product['producer'] ?></span></p>
 									<? } ?>
 									<div class="description">
-										<p class="main"><?= $product['description'] ?></p>
+										<p class="main" itemprop="description"><?= $product['description'] ?></p>
 										<p><a class="more" href="/product/<?= $product['url'] ?>/">Узнать больше...</a></p>
 									</div>
 									<? if (count($product['generics'])) { ?>
@@ -44,7 +44,7 @@
 									<? if (count($product['generics'])) { ?>
 										<ul>
 											<? foreach ($product['generics'] as &$generic) { ?>
-												<li><a href="/product/<?= $generic['url'] ?>/"><?= $generic['name'] ?></a> <span class="price <?= $generic['color'] ?>"><?= $generic['price'] ?> грн</span></li>
+												<li itemprop="isRelatedTo" itemscope itemtype="http://schema.org/Product"><a href="/product/<?= $generic['url'] ?>/" itemprop="url"><span itemprop="name"><?= $generic['name'] ?></span></a> <span class="price <?= $generic['color'] ?>"><?= $generic['price'] ?> грн</span></li>
 											<? } ?>
 										</ul>
 										<? if (count($product['generics']) > 6) { ?>
