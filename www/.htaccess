@@ -1,6 +1,9 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine on
 
+	RewriteCond %{SERVER_NAME} ^www\.
+	RewriteRule ^(.*)$ http://generics.in.ua/$1 [L,R=301,QSA]
+
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteRule ^(.+[^/])$ /$1/ [L,R=301]
 
