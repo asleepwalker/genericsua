@@ -4,6 +4,7 @@
 		<title>Страница не найдена — GenericsUA</title>
 		<? include('meta.php'); ?>
 		<link rel="stylesheet" href="/css/page.css">
+		<? include('analytics.php'); ?>
 	</head>
 	<body>
 		<div class="wrapper">

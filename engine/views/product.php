@@ -12,6 +12,7 @@
 		<meta property="og:image" content="http://generics.in.ua/<?= $product['photo'] != '' ? '/uploads/'.$product['photo'] : '/i/default.jpg' ?>">
 		<link rel="stylesheet" href="/css/product.css">
 		<link rel="stylesheet" href="/bower_components/flag-icon-css/css/flag-icon.css">
+		<? include('analytics.php'); ?>
 	</head>
 	<body>
 		<div class="wrapper">

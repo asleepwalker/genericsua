@@ -10,6 +10,7 @@
 		<meta property="og:image" content="http://generics.in.ua/i/default.jpg">
 		<link rel="stylesheet" href="/css/search.css">
 		<link rel="stylesheet" href="/bower_components/flag-icon-css/css/flag-icon.css">
+		<? include('analytics.php'); ?>
 	</head>
 	<body>
 		<div class="wrapper">

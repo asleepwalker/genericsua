@@ -10,6 +10,7 @@
 		<meta property="og:url" content="http://generics.in.ua/">
 		<meta property="og:image" content="http://generics.in.ua/i/logo.png">
 		<link rel="stylesheet" href="/css/index.css">
+		<? include('analytics.php'); ?>
 	</head>
 	<body>
 		<div class="wrapper">
